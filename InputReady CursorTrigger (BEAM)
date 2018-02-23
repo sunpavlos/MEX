@@ -1,0 +1,10 @@
+// If cursor "Beam",then... (there are many cursor types available)
+Repeat Start (Repeat 99999 times)
+  If Mouse Cursor is Beam
+    Delay 500 Milliseconds
+    Repeat Exit
+  Else
+    Delay 20 Milliseconds
+  End If
+Repeat End
+// *******************************
