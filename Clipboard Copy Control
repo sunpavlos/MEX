@@ -1,0 +1,18 @@
+Clipboard Empty
+// This condition will make macro to wait until there NOTHING in clipboard
+Repeat Start (Repeat 99999 times)
+  If Clipboard Text Equals ""
+    Repeat Exit
+  Else
+    Delay 1 Milliseconds
+  End If
+Repeat End
+Clipboard Copy
+// This condition will make macro to wait until there SOMETHING in clipboard
+Repeat Start (Repeat 99999 times)
+  If Clipboard Text Equals ""
+    Delay 1 Milliseconds
+  Else
+    Repeat Exit
+  End If
+Repeat End
