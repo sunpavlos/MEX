@@ -1,13 +1,13 @@
-<REM2:Activate OCLC>
-<ACTIVATE2:OCLC Connexion>
-<REP3:01:000001:000001:99999:0:01:>
-<IFOTH:03:2:OCLC Connexion>
-<MSD:250>
-<DIS:<TEXTTYPE:YOUR COMMAND or just leave blank>
-<EXITREP>
-<ELSE>
-<ACTIVATE2:OCLC Connexion>
-<MSD:1>
-<ENDIF>
-<ENDREP>
-<REM2:*********************>
+// Activate OCLC
+Activate Window: "OCLC Connexion"
+Repeat Start (Repeat 99999 times)
+  If Window Title "OCLC Connexion" is on top
+    Delay 250 Milliseconds
+    Text Type: YOUR COMMAND or just leave blank
+    Repeat Exit
+  Else
+    Activate Window: "OCLC Connexion"
+    Delay 1 Milliseconds
+  End If
+Repeat End
+// *********************
