@@ -4,7 +4,7 @@ Repeat Start (Repeat 99999 times)
     Delay 500 Milliseconds
     Repeat Exit
   Else
-    Delay 20 Milliseconds
+    Delay 1 Milliseconds
   End If
 Repeat End
 // *******************************
