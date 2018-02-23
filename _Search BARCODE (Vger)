@@ -1,0 +1,23 @@
+// Here you can use native "Activate Window" command or for 100% reliability plugin <Macro Run: "Window Activation"> from MEX repository.
+Activate Window: "Voyager"
+// CLOSE ALL PREVIOUS WINDOWS. This action is necessary to ensure proper records overlaying if working with both Vger/OCLC.  
+Repeat Start (Repeat 3 times)
+  Text Type: <ALT>fo<ENTER>
+Repeat End
+Text Type: <ALT>rb
+Delay 1 Seconds
+Repeat Start (Repeat 99999 times)
+  If Window Title "Retrieve an item record" is on top
+    Delay 1 Milliseconds
+  Else
+    Delay 500 Milliseconds
+    Repeat Exit
+  End If
+Repeat End
+If Window Title "Voyager Cataloging - [Item" is on top
+  Text Type: <CONTROL>j
+Else
+  // If no barcode found - close warning and run this macro (_Search BARCODE) again.
+  Text Type: <ESC>
+  Macro Run: _Search BARCODE
+End If
